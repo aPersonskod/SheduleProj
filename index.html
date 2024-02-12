@@ -90,9 +90,6 @@
             vertical-align: top
         }
     </style>
-    <script>
-
-    </script>
 </head>
 
 <body>
@@ -121,7 +118,11 @@
             if (date < startDate)
                 isChislitel = !isChislitel;
         }
-        return isChislitel ? "Числитель" : "Знаменатель";
+        return isChislitel;
+    }
+    
+    function GetNameOfWeekType(isChisl){
+        return isChisl ? "Числитель" : "Знаменатель";
     }
 
     function GetChislitel() {
@@ -149,7 +150,7 @@
     var isChislitel;
     var currDate;
 
-    document.write("<h1>" + GetTypeOfWeek() + "</h1>")
+    document.write("<h1>" + GetNameOfWeekType(GetTypeOfWeek()) + "</h1>")
     var sheduleData = isChislitel ? GetChislitel() : GetZnamenatel();
     var obj = JSON.parse(sheduleData);
 
@@ -177,6 +178,55 @@
         document.write(
             "    <tr>" +
             "        <td class=" + selectedStyle + " rowspan='4'>" + obj.daysData[i].name + "</td>" +
+            "        <td class='tg-k56v' rowspan='2'>" + obj.daysData[i].fTime + "</td>" +
+            "        <td class='tg-yulj'>" + obj.daysData[i].fLesson + "</td>" +
+            "        <td class='tg-k56v' rowspan='2'>" + obj.daysData[i].fCab + GetLinkTag(obj.daysData[i].fLink) + "</td>" +
+            "    </tr>" +
+            "    <tr>" +
+            "        <td class='tg-66k4'>" + obj.daysData[i].fTeacher + "</td>" +
+            "    </tr>" +
+            "    <tr>" +
+            "        <td class='tg-k56v' rowspan='2'>" + obj.daysData[i].sTime + "</td>" +
+            "        <td class='tg-yulj'>" + obj.daysData[i].sLesson + "</td>" +
+            "        <td class='tg-k56v' rowspan='2'>" + obj.daysData[i].sCab + GetLinkTag(obj.daysData[i].sLink) + "</td>" +
+            "    </tr>" +
+            "    <tr>" +
+            "        <td class='tg-66k4'>" + obj.daysData[i].sTeacher + "</td>" +
+            "    </tr>");
+    }
+
+    document.write("</tbody>");
+
+    // end table
+    document.write("</table>");
+    
+    // next week !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    document.write("<h1>" + GetNameOfWeekType(!GetTypeOfWeek()) + "</h1>")
+    var sheduleData = !isChislitel ? GetChislitel() : GetZnamenatel();
+    var obj = JSON.parse(sheduleData);
+
+
+    // table creator
+    // headers
+    document.write("<table class='tg'>" +
+        "<thead>" +
+        "<tr>" +
+        "<th class='tg-bzci'>Дни</th>" +
+        "<th class='tg-bzci'>Часы</th>" +
+        "<th class='tg-bzci'>4-МВ-4</th>" +
+        "<th class='tg-bzci'>Кабинет</th>" +
+        "</tr>" +
+        "</thead>");
+
+
+    // body
+    document.write("<tbody>");
+
+    for (var i = 0; i < 7; i++) {
+        
+        document.write(
+            "    <tr>" +
+            "        <td class='tg-k56v' rowspan='4'>" + obj.daysData[i].name + "</td>" +
             "        <td class='tg-k56v' rowspan='2'>" + obj.daysData[i].fTime + "</td>" +
             "        <td class='tg-yulj'>" + obj.daysData[i].fLesson + "</td>" +
             "        <td class='tg-k56v' rowspan='2'>" + obj.daysData[i].fCab + GetLinkTag(obj.daysData[i].fLink) + "</td>" +
