@@ -94,10 +94,6 @@
 
 <body>
 <script>
-    function GetChangeBool(boolValue) {
-        return !boolValue;
-    }
-
     function GetDayOfWeek(date) {
         if (date.getDay() != 0)
             return date.getDay();
@@ -106,10 +102,10 @@
 
     function GetTypeOfWeek() {
         //var date = new Date(new Date().getFullYear(), new Date().getMonth(), 14), y = date.getFullYear();
-        var date = new Date(), y = date.getFullYear();
-        var startDate = (date < new Date(y, 8, 1)) ? new Date(y - 1, 8, 1) : new Date(y, 8, 1);
+        let date = new Date(), y = date.getFullYear();
+        let startDate = (date < new Date(y, 8, 1)) ? new Date(y - 1, 8, 1) : new Date(y, 8, 1);
         startDate.setDate(startDate.getDate() - startDate.getDay() + 1);
-        isChislitel = true;
+        let isChislitel = true;
         currDate = date;
 
         while (date > startDate) {
@@ -125,21 +121,106 @@
         return isChisl ? "Числитель" : "Знаменатель";
     }
 
-    function GetChislitel() {
+    async function GetChislitel(isCurrentWeek) {
         //https://jsoneditoronline.org/#left=local.fuqeye&right=local.jayama
-        //return '{"daysData":[{"name":"Понедельник","fTime":"18:30 - 20:00","fLesson":"Прикдадной дизайн","fTeacher":"(пр) Савенкова П.В.","fCab":"ДО","sTime":"20:10 - 21:40","sLesson":"Прикдадной дизайн","sTeacher":"(пр) Савенкова П.В.","sCab":"ДО"},{"name":"Вторник","fTime":"18:30 - 20:00","fLesson":"","fTeacher":"","fCab":"","sTime":"20:10 - 21:40","sLesson":"","sTeacher":"","sCab":""},{"name":"Среда","fTime":"18:30 - 20:00","fLesson":"Прикладной дизайн","fTeacher":"(лекц) Костюк И.С.","fCab":"ДО","sTime":"20:10 - 21:40","sLesson":"","sTeacher":"","sCab":""},{"name":"Четверг","fTime":"18:30 - 20:00","fLesson":"Информационные системы и технологии","fTeacher":"(пр)","fCab":"В 459","sTime":"20:10 - 21:40","sLesson":"Информационные системы и технологии","sTeacher":"(пр)","sCab":"В 459"},{"name":"Пятница","fTime":"18:30 - 20:00","fLesson":"Мультимедийные технологии","fTeacher":"(лекц)","fCab":"В 452","sTime":"20:10 - 21:40","sLesson":"","sTeacher":"","sCab":""},{"name":"Суббота","fTime":"10:05 - 11:30","fLesson":"Учебная практика(технологич.(проектно-технологич. практика))","fTeacher":"(пр) Сошников А.В.","fCab":"ДО","sTime":"11:40 - 13:05","sLesson":"Учебная практика(технологич.(проектно-технологич. практика))","sTeacher":"(пр) Сошников А.В.","sCab":"ДО"},{"name":"Воскресение","fTime":"all time","fLesson":"hope","fTeacher":"we chill","fCab":"at home","sTime":"all time","sLesson":"hope","sTeacher":"we chill","sCab":"at home"}]}';
-        //         return '{"daysData":[{"name":"Понедельник","fTime":"16:55 - 18:30","fLesson":"Прикдадной дизайн","fTeacher":"(пр) Савенкова П.В.","fCab":"ДО","fLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3Ameeting_ZWRiMjQyYjAtM2ZiYS00MGE1LWI1MDItMDNkMzFmOGM1ZTUx@thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%2284df630d-75d7-4816-85ac-08aad649d975%22%7D","key":""},"sTime":"18:30 - 20:00","sLesson":"Прикдадной дизайн","sTeacher":"(пр) Савенкова П.В.","sCab":"ДО","sLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3Ameeting_ZWRiMjQyYjAtM2ZiYS00MGE1LWI1MDItMDNkMzFmOGM1ZTUx@thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%2284df630d-75d7-4816-85ac-08aad649d975%22%7D","key":""}},{"name":"Вторник","fTime":"18:30 - 20:00","fLesson":"","fTeacher":"","fCab":"","fLink":{"link":"","key":""},"sTime":"20:10 - 21:40","sLesson":"","sTeacher":"","sCab":"","sLink":{"link":"","key":""}},{"name":"Среда","fTime":"18:30 - 20:00","fLesson":"Прикладной дизайн","fTeacher":"(лекц) Костюк И.С.","fCab":"ДО","fLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3Ameeting_ZjRjYjljOGEtZjU2Zi00NTcwLWJmMjMtMzUxN2E2M2NjYjIy@thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%22c9c04aea-6c9c-45be-8903-188f1d845f28%22%7D","key":""},"sTime":"20:10 - 21:40","sLesson":"","sTeacher":"","sCab":"","sLink":{"link":"","key":""}},{"name":"Четверг","fTime":"18:30 - 20:00","fLesson":"Информационные системы и технологии","fTeacher":"(пр) Ксения Вечеславовна Корзун (тг @redxenia)","fCab":"ДО","fLink":{"link":"","key":""},"sTime":"20:10 - 21:40","sLesson":"Информационные системы и технологии","sTeacher":"(пр) Ксения Вечеславовна Корзун (тг @redxenia)","sCab":"ДО","sLink":{"link":"","key":""}},{"name":"Пятница","fTime":"18:30 - 20:00","fLesson":"Мультимедийные технологии","fTeacher":"(лекц)","fCab":"В 452 (ДО)","fLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3Ameeting_YzgyOTkyOTEtMGQ5NS00YTQ3LWE1NDQtOGVmMGQ3Y2M3OGU0%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%2284df630d-75d7-4816-85ac-08aad649d975%22%7D","key":"Dgp22z"},"sTime":"20:10 - 21:40","sLesson":"","sTeacher":"","sCab":"","sLink":{"link":"","key":""}},{"name":"Суббота","fTime":"10:05 - 11:30","fLesson":"Учебная практика(технологич.(проектно-технологич. практика))","fTeacher":"(пр) Сошников А.В.","fCab":"ДО","fLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3ameeting_YTBmZDIwZTYtYmMzMC00ZTkzLTkyMjMtYTcwMTQ4Y2E0YmU3%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%2281c9c07c-4933-487c-ade6-d0275a07f9ca%22%7d","key":"VJXs6i"},"sTime":"11:40 - 13:05","sLesson":"Учебная практика(технологич.(проектно-технологич. практика))","sTeacher":"(пр) Сошников А.В.","sCab":"ДО","sLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3ameeting_YTBmZDIwZTYtYmMzMC00ZTkzLTkyMjMtYTcwMTQ4Y2E0YmU3%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%2281c9c07c-4933-487c-ade6-d0275a07f9ca%22%7d","key":"VJXs6i"}},{"name":"Воскресение","fTime":"all time","fLesson":"hope","fTeacher":"we chill","fCab":"at home","fLink":{"link":"","key":""},"sTime":"all time","sLesson":"hope","sTeacher":"we chill","sCab":"at home","sLink":{"link":"","key":""}}]}'
-        return '{"daysData":[{"name":"Понедельник","fTime":"18:30 - 20:00","fLesson":"","fTeacher":"","fCab":"","fLink":{"link":"","key":""},"sTime":"20:10 - 21:40","sLesson":"","sTeacher":"","sCab":"","sLink":{"link":"","key":""}},{"name":"Вторник","fTime":"18:00 - 20:00","fLesson":"Разработка ИТ-проекта","fTeacher":"(пр) Савенкова П.В.","fCab":"ДО","fLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3Ameeting_YjZkY2Q4YTctNWM4ZS00OWI3LTljYzYtZDFkMDJiYTg5MzYz%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%227408a9e7-b236-4e76-b70a-7e5e8d65b36f%22%7D","key":""},"sTime":"20:10 - 21:40","sLesson":"","sTeacher":"","sCab":"","sLink":{"link":"","key":""}},{"name":"Среда","fTime":"18:30 - 20:00","fLesson":"Информационные системы и технологии","fTeacher":"(пр) Шевякова А.Р.","fCab":"В 484","fLink":{"link":"","key":""},"sTime":"20:10 - 21:40","sLesson":"Информационные системы и технологии","sTeacher":"(пр) Шевякова А.Р.","sCab":"В 484","sLink":{"link":"","key":""}},{"name":"Четверг","fTime":"18:30 - 20:00","fLesson":"Психология пользователя","fTeacher":"(лек) Косарева А.Н.","fCab":"ДО","fLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3Ameeting_Mjg1YzYzYjctNDhkMS00MzZjLWJlMWItOGQzMGM1Y2QzYmVk%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%22cabb4e2e-55c3-4c37-b4ce-04d6012bb14f%22%7D","key":""},"sTime":"20:10 - 21:40","sLesson":"Психология пользователя","sTeacher":"(пр) Косарева А.Н.","sCab":"ДО","sLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3Ameeting_Mjg1YzYzYjctNDhkMS00MzZjLWJlMWItOGQzMGM1Y2QzYmVk%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%22cabb4e2e-55c3-4c37-b4ce-04d6012bb14f%22%7D","key":""}},{"name":"Пятница","fTime":"18:30 - 20:00","fLesson":"Информационные системы и технологии","fTeacher":"(лек) Шевякова А.Р.","fCab":"ДО","fLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDg5M2JmYmItM2JmNS00NTk3LTgwNmEtOGU4ZGM0MTU1NDYy%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%22f8101530-8d73-40e6-89ba-826d08303afc%22%7d","key":""},"sTime":"20:10 - 21:40","sLesson":"Информационные системы и технологии","sTeacher":"(лек) Шевякова А.Р.","sCab":"ДО","sLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDg5M2JmYmItM2JmNS00NTk3LTgwNmEtOGU4ZGM0MTU1NDYy%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%22f8101530-8d73-40e6-89ba-826d08303afc%22%7d","key":""}},{"name":"Суббота","fTime":"all time","fLesson":"hope","fTeacher":"we chill","fCab":"at home","fLink":{"link":"","key":""},"sTime":"all time","sLesson":"hope","sTeacher":"we chill","sCab":"at home","sLink":{"link":"","key":""}},{"name":"Воскресение","fTime":"all time","fLesson":"hope","fTeacher":"we chill","fCab":"at home","fLink":{"link":"","key":""},"sTime":"all time","sLesson":"hope","sTeacher":"we chill","sCab":"at home","sLink":{"link":"","key":""}}]}';
+        await fetch('./Chislitel.json')
+            .then((response) => response.json())
+            .then((jsonData) => {
+                document.body.appendChild(CreateH1(GetNameOfWeekType(true)));
+                DrawTable(jsonData, isCurrentWeek);
+            });
+    }
+    async function GetZnamenatel(isCurrentWeek) {
+        //https://jsoneditoronline.org/#left=local.fuqeye&right=local.jayama
+        await fetch('./Znamenatel.json')
+            .then((response) => response.json())
+            .then(jsonData => {
+                document.body.appendChild(CreateH1(GetNameOfWeekType(false)));
+                DrawTable(jsonData, isCurrentWeek);
+            });
     }
 
-    function GetZnamenatel() {
-        //https://jsoneditoronline.org/#left=local.fuqeye&right=local.jayama
-        //return '{"daysData":[{"name":"Понедельник","fTime":"18:30 - 20:00","fLesson":"-","fTeacher":"-","fCab":"-","fLink":{"link":"","key":""},"sTime":"20:10 - 21:40","sLesson":"-","sTeacher":"-","sCab":"-","sLink":{"link":"","key":""}},{"name":"Вторник","fTime":"18:30 - 20:00","fLesson":"","fTeacher":"","fCab":"","fLink":{"link":"","key":""},"sTime":"20:10 - 21:40","sLesson":"","sTeacher":"","sCab":"","sLink":{"link":"","key":""}},{"name":"Среда","fTime":"18:30 - 20:00","fLesson":"Правоведение","fTeacher":"(лекц)","fCab":"В 401","fLink":{"link":"","key":""},"sTime":"20:10 - 21:40","sLesson":"Правоведение","sTeacher":"(лекц)","sCab":"В 401","sLink":{"link":"","key":""}},{"name":"Четверг","fTime":"18:30 - 20:00","fLesson":"Информационные системы и технологии","fTeacher":"(лекц)","fCab":"ДО","fLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM0OTg0YWUtZjhmNC00OTNmLTkwOGMtY2FmMTQzMDQzNzRm%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%22a32e193d-82eb-4082-99ba-697d283e20c1%22%7d","key":""},"sTime":"20:10 - 21:40","sLesson":"Информационные системы и технологии","sTeacher":"(лекц)","sCab":"ДО","sLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM0OTg0YWUtZjhmNC00OTNmLTkwOGMtY2FmMTQzMDQzNzRm%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%22a32e193d-82eb-4082-99ba-697d283e20c1%22%7d","key":""}},{"name":"Пятница","fTime":"18:30 - 20:00","fLesson":"Мультимедийные технологии","fTeacher":"(пр)","fCab":"В 484","fLink":{"link":"","key":""},"sTime":"20:10 - 21:40","sLesson":"Мультимедийные технологии","sTeacher":"(пр)","sCab":"В 484","sLink":{"link":"","key":""}},{"name":"Суббота","fTime":"10:05 - 11:30","fLesson":"","fTeacher":"","fCab":"","fLink":{"link":"","key":""},"sTime":"11:40 - 13:05","sLesson":"Учебная практика(технологич.(проектно-технологич. практика))","sTeacher":"(пр) Сошников А.В.","sCab":"ДО","sLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3ameeting_YTBmZDIwZTYtYmMzMC00ZTkzLTkyMjMtYTcwMTQ4Y2E0YmU3%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%2281c9c07c-4933-487c-ade6-d0275a07f9ca%22%7d","key":"VJXs6i"}},{"name":"Воскресение","fTime":"all time","fLesson":"hope","fTeacher":"we chill","fCab":"at home","fLink":{"link":"","key":""},"sTime":"all time","sLesson":"hope","sTeacher":"we chill","sCab":"at home","sLink":{"link":"","key":""}}]}';
-        return '{"daysData":[{"name":"Понедельник","fTime":"18:30 - 20:00","fLesson":"","fTeacher":"","fCab":"","fLink":{"link":"","key":""},"sTime":"20:10 - 21:40","sLesson":"","sTeacher":"","sCab":"","sLink":{"link":"","key":""}},{"name":"Вторник","fTime":"18:30 - 20:00","fLesson":"Разработка ИТ-проекта","fTeacher":"(лекц) Савенкова П.В.","fCab":"ДО","fLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3Ameeting_YjZkY2Q4YTctNWM4ZS00OWI3LTljYzYtZDFkMDJiYTg5MzYz%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%227408a9e7-b236-4e76-b70a-7e5e8d65b36f%22%7D","key":""},"sTime":"20:10 - 21:40","sLesson":"","sTeacher":"","sCab":"","sLink":{"link":"","key":""}},{"name":"Среда","fTime":"18:30 - 20:00","fLesson":"Производственная практика (технологическая (проектно-технологическая) практика)","fTeacher":"(пр) Калугина Н.И.","fCab":"ДО","fLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3Ameeting_YmZkOTIyNGYtYWE2Ni00M2RkLTkzN2ItOWM2MDVjMTlhMTM5%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%220338160b-7d17-4160-b79b-ddb7e39f2a81%22%7D","key":""},"sTime":"20:10 - 21:40","sLesson":"Производственная практика (технологическая (проектно-технологическая) практика)","sTeacher":"(пр) Калугина Н.И.","sCab":"ДО","sLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3Ameeting_YmZkOTIyNGYtYWE2Ni00M2RkLTkzN2ItOWM2MDVjMTlhMTM5%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%220338160b-7d17-4160-b79b-ddb7e39f2a81%22%7D","key":""}},{"name":"Четверг","fTime":"18:30 - 20:00","fLesson":"Программная инженерия","fTeacher":"(лекц) Суханов М.Б.","fCab":"В 452","fLink":{"link":"","key":""},"sTime":"20:10 - 21:40","sLesson":"Программная инженерия","sTeacher":"(пр) Суханов М.Б..","sCab":"В 462","sLink":{"link":"","key":""}},{"name":"Пятница","fTime":"18:30 - 20:00","fLesson":"Web-дизайн","fTeacher":"(лекц) Славникова М.А.","fCab":"ДО","fLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3ameeting_N2U4MTg5OTgtYjdkZS00ODcxLWExNDMtYjAwZTMzZjlmY2E4%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%2256ba67f0-91de-47d4-9047-f5517985374e%22%7d","key":""},"sTime":"20:10 - 21:40","sLesson":"Web-дизайн","sTeacher":"(пр) Славникова М.А.","sCab":"ДО","sLink":{"link":"https://teams.microsoft.com/l/meetup-join/19%3ameeting_N2U4MTg5OTgtYjdkZS00ODcxLWExNDMtYjAwZTMzZjlmY2E4%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%2256ba67f0-91de-47d4-9047-f5517985374e%22%7d","key":""}},{"name":"Суббота","fTime":"all time","fLesson":"hope","fTeacher":"we chill","fCab":"at home","fLink":{"link":"","key":""},"sTime":"all time","sLesson":"hope","sTeacher":"we chill","sCab":"at home","sLink":{"link":"","key":""}},{"name":"Воскресение","fTime":"all time","fLesson":"hope","fTeacher":"we chill","fCab":"at home","fLink":{"link":"","key":""},"sTime":"all time","sLesson":"hope","sTeacher":"we chill","sCab":"at home","sLink":{"link":"","key":""}}]}';
-        //return '{"daysData":[{"name":"Понедельник","fTime":"18:30 - 20:00","fLesson":"-","fTeacher":"-","fCab":"-","fLink":{"link":"https://www.google.com/","key":"fkey"},"sTime":"20:10 - 21:40","sLesson":"-","sTeacher":"-","sCab":"-","sLink":{"link":"https://www.google.com/","key":"skey"}}]}';
-    }
+    // draw html
+    function DrawTable(jsonData, isCurrentWeek){
+        let table = document.createElement('table');
+        table.classList.add('tg');
+        
+        //draw thead
+        let tHead = document.createElement('thead');
+        let trh = CreateTR();
+        let th1 = CreateTH('tg-bzci', "Дни");
+        let th2 = CreateTH('tg-bzci', "Часы");
+        let th3 = CreateTH('tg-bzci', "4-МВ-4");
+        let th4 = CreateTH('tg-bzci', "Кабинет");
+        trh.appendChild(th1);
+        trh.appendChild(th2);
+        trh.appendChild(th3);
+        trh.appendChild(th4);
+        tHead.appendChild(trh);
+        table.appendChild(tHead);
+        
+        //draw tbody
+        let tBody = document.createElement('tbody');
 
-    // for html
+        for (let i = 0; i < 7; i++) {
+
+            let selectedStyle = (GetDayOfWeek(currDate) - 1 == i && isCurrentWeek) ? 'tg-k56vSelected' : 'tg-k56v';
+            let tr1 = CreateTR();
+            let td11 = CreateTD(selectedStyle, 4, jsonData.daysData[i].name);
+            let td12 = CreateTD('tg-k56v', 2, jsonData.daysData[i].fTime);
+            let td13 = CreateTD('tg-yulj', 0, jsonData.daysData[i].fLesson);
+            let td14 = CreateTD('tg-k56v', 2, jsonData.daysData[i].fCab + GetLinkTag(jsonData.daysData[i].fLink));
+            tr1.appendChild(td11);
+            tr1.appendChild(td12);
+            tr1.appendChild(td13);
+            tr1.appendChild(td14);
+
+            let tr2 = CreateTR();
+            let td21 = CreateTD('tg-66k4', 0, jsonData.daysData[i].fTeacher);
+            tr2.appendChild(td21);
+
+            let tr3 = CreateTR();
+            let td31 = CreateTD('tg-k56v', 2, jsonData.daysData[i].sTime);
+            let td32 = CreateTD('tg-yulj', 0, jsonData.daysData[i].sLesson);
+            let td33 = CreateTD('tg-k56v', 2, jsonData.daysData[i].sCab + GetLinkTag(jsonData.daysData[i].sLink));
+            tr3.appendChild(td31);
+            tr3.appendChild(td32);
+            tr3.appendChild(td33);
+
+            let tr4 = CreateTR();
+            let td41 = CreateTD('tg-66k4', 0, jsonData.daysData[i].sTeacher);
+            tr4.appendChild(td41);
+
+            tBody.appendChild(tr1);
+            tBody.appendChild(tr2);
+            tBody.appendChild(tr3);
+            tBody.appendChild(tr4);
+        }
+
+        table.appendChild(tBody);
+        document.body.appendChild(table);
+    }
+    function CreateTR(){
+        return document.createElement('tr');
+    }
+    function CreateTD(styleClass, rowSpan, text){
+        let td = document.createElement('td');
+        td.classList.add(styleClass);
+        if(rowSpan != 0) td.rowSpan = rowSpan;
+        td.innerHTML = text;
+        return td;
+    }
+    function CreateTH(styleClass, text){
+        let th = document.createElement('th');
+        th.classList.add(styleClass);
+        th.innerHTML = text;
+        return th;
+    }
+    function CreateH1(text){
+        let h1 = document.createElement('h1');
+        h1.innerHTML = text;
+        return h1;
+    }
     function GetLinkTag(linkObj) {
         if (linkObj.link != "")
             return "<br><a href=" + linkObj.link + " target='_blank'\n" + "rel='noopener noreferrer'>Ссылка на конференцию</a>" +
@@ -147,107 +228,18 @@
         return "";
     }
 
-    var isChislitel;
     var currDate;
-
-    document.write("<h1>" + GetNameOfWeekType(GetTypeOfWeek()) + "</h1>")
-    var sheduleData = isChislitel ? GetChislitel() : GetZnamenatel();
-    var obj = JSON.parse(sheduleData);
-
-
-    // table creator
-    // headers
-    document.write("<table class='tg'>" +
-        "<thead>" +
-        "<tr>" +
-        "<th class='tg-bzci'>Дни</th>" +
-        "<th class='tg-bzci'>Часы</th>" +
-        "<th class='tg-bzci'>4-МВ-4</th>" +
-        "<th class='tg-bzci'>Кабинет</th>" +
-        "</tr>" +
-        "</thead>");
-
-
-    // body
-    document.write("<tbody>");
-
-    for (var i = 0; i < 7; i++) {
-
-        var selectedStyle = GetDayOfWeek(currDate) - 1 == i ? 'tg-k56vSelected' : 'tg-k56v';
-
-        document.write(
-            "    <tr>" +
-            "        <td class=" + selectedStyle + " rowspan='4'>" + obj.daysData[i].name + "</td>" +
-            "        <td class='tg-k56v' rowspan='2'>" + obj.daysData[i].fTime + "</td>" +
-            "        <td class='tg-yulj'>" + obj.daysData[i].fLesson + "</td>" +
-            "        <td class='tg-k56v' rowspan='2'>" + obj.daysData[i].fCab + GetLinkTag(obj.daysData[i].fLink) + "</td>" +
-            "    </tr>" +
-            "    <tr>" +
-            "        <td class='tg-66k4'>" + obj.daysData[i].fTeacher + "</td>" +
-            "    </tr>" +
-            "    <tr>" +
-            "        <td class='tg-k56v' rowspan='2'>" + obj.daysData[i].sTime + "</td>" +
-            "        <td class='tg-yulj'>" + obj.daysData[i].sLesson + "</td>" +
-            "        <td class='tg-k56v' rowspan='2'>" + obj.daysData[i].sCab + GetLinkTag(obj.daysData[i].sLink) + "</td>" +
-            "    </tr>" +
-            "    <tr>" +
-            "        <td class='tg-66k4'>" + obj.daysData[i].sTeacher + "</td>" +
-            "    </tr>");
-    }
-
-    document.write("</tbody>");
-
-    // end table
-    document.write("</table>");
+    let isChislitel = GetTypeOfWeek();
     
-    // next week !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    document.write("<h1>" + GetNameOfWeekType(!GetTypeOfWeek()) + "</h1>")
-    var sheduleData = !isChislitel ? GetChislitel() : GetZnamenatel();
-    var obj = JSON.parse(sheduleData);
-
-
-    // table creator
-    // headers
-    document.write("<table class='tg'>" +
-        "<thead>" +
-        "<tr>" +
-        "<th class='tg-bzci'>Дни</th>" +
-        "<th class='tg-bzci'>Часы</th>" +
-        "<th class='tg-bzci'>4-МВ-4</th>" +
-        "<th class='tg-bzci'>Кабинет</th>" +
-        "</tr>" +
-        "</thead>");
-
-
-    // body
-    document.write("<tbody>");
-
-    for (var i = 0; i < 7; i++) {
-        
-        document.write(
-            "    <tr>" +
-            "        <td class='tg-k56v' rowspan='4'>" + obj.daysData[i].name + "</td>" +
-            "        <td class='tg-k56v' rowspan='2'>" + obj.daysData[i].fTime + "</td>" +
-            "        <td class='tg-yulj'>" + obj.daysData[i].fLesson + "</td>" +
-            "        <td class='tg-k56v' rowspan='2'>" + obj.daysData[i].fCab + GetLinkTag(obj.daysData[i].fLink) + "</td>" +
-            "    </tr>" +
-            "    <tr>" +
-            "        <td class='tg-66k4'>" + obj.daysData[i].fTeacher + "</td>" +
-            "    </tr>" +
-            "    <tr>" +
-            "        <td class='tg-k56v' rowspan='2'>" + obj.daysData[i].sTime + "</td>" +
-            "        <td class='tg-yulj'>" + obj.daysData[i].sLesson + "</td>" +
-            "        <td class='tg-k56v' rowspan='2'>" + obj.daysData[i].sCab + GetLinkTag(obj.daysData[i].sLink) + "</td>" +
-            "    </tr>" +
-            "    <tr>" +
-            "        <td class='tg-66k4'>" + obj.daysData[i].sTeacher + "</td>" +
-            "    </tr>");
+    // todo need to fix order of executing functions (second can be in front of second)
+    if(isChislitel){
+        GetChislitel(isChislitel);
+        GetZnamenatel(!isChislitel);
+    } else {
+        GetZnamenatel(!isChislitel);
+        GetChislitel(isChislitel);
     }
 
-    document.write("</tbody>");
-
-    // end table
-    document.write("</table>");
 </script>
 </body>
 </html>
