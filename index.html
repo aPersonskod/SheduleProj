@@ -139,6 +139,15 @@
                 DrawTable(jsonData, isCurrentWeek);
             });
     }
+    async function drawSchedule(isChislitel){
+        if(isChislitel){
+            await GetChislitel(isChislitel);
+            await GetZnamenatel(!isChislitel);
+        } else {
+            await GetZnamenatel(!isChislitel);
+            await GetChislitel(isChislitel);
+        }
+    }
 
     // draw html
     function DrawTable(jsonData, isCurrentWeek){
@@ -231,14 +240,7 @@
     var currDate;
     let isChislitel = GetTypeOfWeek();
     
-    // todo need to fix order of executing functions (second can be in front of second)
-    if(isChislitel){
-        GetChislitel(isChislitel);
-        GetZnamenatel(!isChislitel);
-    } else {
-        GetZnamenatel(!isChislitel);
-        GetChislitel(isChislitel);
-    }
+    drawSchedule(isChislitel);
 
 </script>
 </body>
