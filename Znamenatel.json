@@ -1,0 +1,137 @@
+﻿{
+  "daysData": [
+    {
+      "name": "Понедельник",
+      "fTime": "18:30 - 20:00",
+      "fLesson": "",
+      "fTeacher": "",
+      "fCab": "",
+      "fLink": {
+        "link": "",
+        "key": ""
+      },
+      "sTime": "20:10 - 21:40",
+      "sLesson": "",
+      "sTeacher": "",
+      "sCab": "",
+      "sLink": {
+        "link": "",
+        "key": ""
+      }
+    },
+    {
+      "name": "Вторник",
+      "fTime": "18:00 - 20:00",
+      "fLesson": "Разработка ИТ-проекта",
+      "fTeacher": "(пр) Савенкова П.В.",
+      "fCab": "ДО",
+      "fLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_YjZkY2Q4YTctNWM4ZS00OWI3LTljYzYtZDFkMDJiYTg5MzYz%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%227408a9e7-b236-4e76-b70a-7e5e8d65b36f%22%7D",
+        "key": ""
+      },
+      "sTime": "20:10 - 21:40",
+      "sLesson": "",
+      "sTeacher": "",
+      "sCab": "",
+      "sLink": {
+        "link": "",
+        "key": ""
+      }
+    },
+    {
+      "name": "Среда",
+      "fTime": "18:30 - 20:00",
+      "fLesson": "Производственная практика (технологическая (проектно-технологическая) практика)",
+      "fTeacher": "(пр) Калугина Н.И.",
+      "fCab": "ДО (Дискорд)",
+      "fLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_YmZkOTIyNGYtYWE2Ni00M2RkLTkzN2ItOWM2MDVjMTlhMTM5%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%220338160b-7d17-4160-b79b-ddb7e39f2a81%22%7D",
+        "key": ""
+      },
+      "sTime": "20:10 - 21:40",
+      "sLesson": "Производственная практика (технологическая (проектно-технологическая) практика)",
+      "sTeacher": "(пр) Калугина Н.И.",
+      "sCab": "ДО (Дискорд)",
+      "sLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_YmZkOTIyNGYtYWE2Ni00M2RkLTkzN2ItOWM2MDVjMTlhMTM5%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%220338160b-7d17-4160-b79b-ddb7e39f2a81%22%7D",
+        "key": ""
+      }
+    },
+    {
+      "name": "Четверг",
+      "fTime": "18:30 - 20:00",
+      "fLesson": "Программная инженерия",
+      "fTeacher": "(лекц) Суханов М.Б.",
+      "fCab": "В 452",
+      "fLink": {
+        "link": "",
+        "key": ""
+      },
+      "sTime": "20:10 - 21:40",
+      "sLesson": "Программная инженерия",
+      "sTeacher": "(пр) Суханов М.Б..",
+      "sCab": "В 462",
+      "sLink": {
+        "link": "",
+        "key": ""
+      }
+    },
+    {
+      "name": "Пятница",
+      "fTime": "18:30 - 20:00",
+      "fLesson": "Web-дизайн",
+      "fTeacher": "(лекц) Славникова М.А.",
+      "fCab": "ДО",
+      "fLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_OGE0YzI2NDktYWJlNy00MDdlLWFmNzctOTZiMjZjN2Q2NGZl%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%220338160b-7d17-4160-b79b-ddb7e39f2a81%22%7D",
+        "key": ""
+      },
+      "sTime": "20:10 - 21:40",
+      "sLesson": "Web-дизайн",
+      "sTeacher": "(пр) Славникова М.А.",
+      "sCab": "ДО",
+      "sLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_OGE0YzI2NDktYWJlNy00MDdlLWFmNzctOTZiMjZjN2Q2NGZl%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%220338160b-7d17-4160-b79b-ddb7e39f2a81%22%7D",
+        "key": ""
+      }
+    },
+    {
+      "name": "Суббота",
+      "fTime": "all time",
+      "fLesson": "hope",
+      "fTeacher": "we chill",
+      "fCab": "at home",
+      "fLink": {
+        "link": "",
+        "key": ""
+      },
+      "sTime": "all time",
+      "sLesson": "hope",
+      "sTeacher": "we chill",
+      "sCab": "at home",
+      "sLink": {
+        "link": "",
+        "key": ""
+      }
+    },
+    {
+      "name": "Воскресение",
+      "fTime": "all time",
+      "fLesson": "hope",
+      "fTeacher": "we chill",
+      "fCab": "at home",
+      "fLink": {
+        "link": "",
+        "key": ""
+      },
+      "sTime": "all time",
+      "sLesson": "hope",
+      "sTeacher": "we chill",
+      "sCab": "at home",
+      "sLink": {
+        "link": "",
+        "key": ""
+      }
+    }
+  ]
+}

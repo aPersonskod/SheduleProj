@@ -1,0 +1,137 @@
+﻿{
+  "daysData": [
+    {
+      "name": "Понедельник",
+      "fTime": "18:30 - 20:00",
+      "fLesson": "",
+      "fTeacher": "",
+      "fCab": "",
+      "fLink": {
+        "link": "",
+        "key": ""
+      },
+      "sTime": "20:10 - 21:40",
+      "sLesson": "",
+      "sTeacher": "",
+      "sCab": "",
+      "sLink": {
+        "link": "",
+        "key": ""
+      }
+    },
+    {
+      "name": "Вторник",
+      "fTime": "18:00 - 20:00",
+      "fLesson": "Разработка ИТ-проекта",
+      "fTeacher": "(пр) Савенкова П.В.",
+      "fCab": "ДО",
+      "fLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_YjZkY2Q4YTctNWM4ZS00OWI3LTljYzYtZDFkMDJiYTg5MzYz%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%227408a9e7-b236-4e76-b70a-7e5e8d65b36f%22%7D",
+        "key": ""
+      },
+      "sTime": "20:10 - 21:40",
+      "sLesson": "",
+      "sTeacher": "",
+      "sCab": "",
+      "sLink": {
+        "link": "",
+        "key": ""
+      }
+    },
+    {
+      "name": "Среда",
+      "fTime": "18:30 - 20:00",
+      "fLesson": "Информационные системы и технологии",
+      "fTeacher": "(пр) Шевякова А.Р.",
+      "fCab": "В 484",
+      "fLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_NGE3NjhlODctNWE4My00OTNhLWEzZmQtOTM5MjQ2YmVjNWFi%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%22f8101530-8d73-40e6-89ba-826d08303afc%22%7D",
+        "key": ""
+      },
+      "sTime": "20:10 - 21:40",
+      "sLesson": "Информационные системы и технологии",
+      "sTeacher": "(пр) Шевякова А.Р.",
+      "sCab": "В 484",
+      "sLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_NGE3NjhlODctNWE4My00OTNhLWEzZmQtOTM5MjQ2YmVjNWFi%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%22f8101530-8d73-40e6-89ba-826d08303afc%22%7D",
+        "key": ""
+      }
+    },
+    {
+      "name": "Четверг",
+      "fTime": "18:30 - 20:00",
+      "fLesson": "Психология пользователя",
+      "fTeacher": "(лек) Косарева А.Н.",
+      "fCab": "ДО",
+      "fLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_Mjg1YzYzYjctNDhkMS00MzZjLWJlMWItOGQzMGM1Y2QzYmVk%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%22cabb4e2e-55c3-4c37-b4ce-04d6012bb14f%22%7D",
+        "key": ""
+      },
+      "sTime": "20:10 - 21:40",
+      "sLesson": "Психология пользователя",
+      "sTeacher": "(пр) Косарева А.Н.",
+      "sCab": "ДО",
+      "sLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_Mjg1YzYzYjctNDhkMS00MzZjLWJlMWItOGQzMGM1Y2QzYmVk%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%22cabb4e2e-55c3-4c37-b4ce-04d6012bb14f%22%7D",
+        "key": ""
+      }
+    },
+    {
+      "name": "Пятница",
+      "fTime": "18:30 - 20:00",
+      "fLesson": "Информационные системы и технологии",
+      "fTeacher": "(лек) Шевякова А.Р.",
+      "fCab": "ДО",
+      "fLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDg5M2JmYmItM2JmNS00NTk3LTgwNmEtOGU4ZGM0MTU1NDYy%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%22f8101530-8d73-40e6-89ba-826d08303afc%22%7d",
+        "key": ""
+      },
+      "sTime": "20:10 - 21:40",
+      "sLesson": "Информационные системы и технологии",
+      "sTeacher": "(лек) Шевякова А.Р.",
+      "sCab": "ДО",
+      "sLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDg5M2JmYmItM2JmNS00NTk3LTgwNmEtOGU4ZGM0MTU1NDYy%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%22f8101530-8d73-40e6-89ba-826d08303afc%22%7d",
+        "key": ""
+      }
+    },
+    {
+      "name": "Суббота",
+      "fTime": "all time",
+      "fLesson": "hope",
+      "fTeacher": "we chill",
+      "fCab": "at home",
+      "fLink": {
+        "link": "",
+        "key": ""
+      },
+      "sTime": "all time",
+      "sLesson": "hope",
+      "sTeacher": "we chill",
+      "sCab": "at home",
+      "sLink": {
+        "link": "",
+        "key": ""
+      }
+    },
+    {
+      "name": "Воскресение",
+      "fTime": "all time",
+      "fLesson": "hope",
+      "fTeacher": "we chill",
+      "fCab": "at home",
+      "fLink": {
+        "link": "",
+        "key": ""
+      },
+      "sTime": "all time",
+      "sLesson": "hope",
+      "sTeacher": "we chill",
+      "sCab": "at home",
+      "sLink": {
+        "link": "",
+        "key": ""
+      }
+    }
+  ]
+}
