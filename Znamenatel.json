@@ -3,36 +3,36 @@
     {
       "name": "Понедельник",
       "fTime": "18:30 - 20:00",
-      "fLesson": "",
-      "fTeacher": "",
-      "fCab": "",
+      "fLesson": "Системы искуственного интеллекта",
+      "fTeacher": "(лек) Волков А.И.",
+      "fCab": "ДО",
       "fLink": {
-        "link": "",
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_ODIzN2MyNjEtMjg0NC00ZDFiLWIyMjUtMzJhZGJlZDg4NTll%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%22f8101530-8d73-40e6-89ba-826d08303afc%22%7d",
         "key": ""
       },
       "sTime": "20:10 - 21:40",
-      "sLesson": "",
-      "sTeacher": "",
-      "sCab": "",
+      "sLesson": "Системы искуственного интеллекта",
+      "sTeacher": "(лаб) Волков А.И.",
+      "sCab": "ДО",
       "sLink": {
-        "link": "",
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_ODIzN2MyNjEtMjg0NC00ZDFiLWIyMjUtMzJhZGJlZDg4NTll%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%22f8101530-8d73-40e6-89ba-826d08303afc%22%7d",
         "key": ""
       }
     },
     {
       "name": "Вторник",
-      "fTime": "18:00 - 20:00",
-      "fLesson": "Разработка ИТ-проекта",
-      "fTeacher": "(пр) Савенкова П.В.",
-      "fCab": "ДО",
+      "fTime": "18:30 - 20:00",
+      "fLesson": "Патентно-лицензионная работа",
+      "fTeacher": "(лек.) Шванкин А.М.",
+      "fCab": "525",
       "fLink": {
-        "link": "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_YjZkY2Q4YTctNWM4ZS00OWI3LTljYzYtZDFkMDJiYTg5MzYz%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%227408a9e7-b236-4e76-b70a-7e5e8d65b36f%22%7D",
+        "link": "",
         "key": ""
       },
       "sTime": "20:10 - 21:40",
-      "sLesson": "",
-      "sTeacher": "",
-      "sCab": "",
+      "sLesson": "Патентно-лицензионная работа",
+      "sTeacher": "(лек.) Шванкин А.М.",
+      "sCab": "525",
       "sLink": {
         "link": "",
         "key": ""
@@ -41,36 +41,36 @@
     {
       "name": "Среда",
       "fTime": "18:30 - 20:00",
-      "fLesson": "Производственная практика (технологическая (проектно-технологическая) практика)",
-      "fTeacher": "(пр) Калугина Н.И.",
-      "fCab": "ДО (Дискорд)",
+      "fLesson": "Администрирование информационных систем",
+      "fTeacher": "(лек.) Валуев К.В.",
+      "fCab": "ДО",
       "fLink": {
-        "link": "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_YmZkOTIyNGYtYWE2Ni00M2RkLTkzN2ItOWM2MDVjMTlhMTM5%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%220338160b-7d17-4160-b79b-ddb7e39f2a81%22%7D",
+        "link": "",
         "key": ""
       },
       "sTime": "20:10 - 21:40",
-      "sLesson": "Производственная практика (технологическая (проектно-технологическая) практика)",
-      "sTeacher": "(пр) Калугина Н.И.",
-      "sCab": "ДО (Дискорд)",
+      "sLesson": "",
+      "sTeacher": "",
+      "sCab": "",
       "sLink": {
-        "link": "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_YmZkOTIyNGYtYWE2Ni00M2RkLTkzN2ItOWM2MDVjMTlhMTM5%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%220338160b-7d17-4160-b79b-ddb7e39f2a81%22%7D",
+        "link": "",
         "key": ""
       }
     },
     {
       "name": "Четверг",
       "fTime": "18:30 - 20:00",
-      "fLesson": "Программная инженерия",
-      "fTeacher": "(лекц) Суханов М.Б.",
-      "fCab": "В 452",
+      "fLesson": "Web-дизайн",
+      "fTeacher": "(пр) Кокорин Е.С.",
+      "fCab": "В 462",
       "fLink": {
         "link": "",
         "key": ""
       },
       "sTime": "20:10 - 21:40",
-      "sLesson": "Программная инженерия",
-      "sTeacher": "(пр) Суханов М.Б..",
-      "sCab": "В 462",
+      "sLesson": "",
+      "sTeacher": "",
+      "sCab": "",
       "sLink": {
         "link": "",
         "key": ""
@@ -79,19 +79,19 @@
     {
       "name": "Пятница",
       "fTime": "18:30 - 20:00",
-      "fLesson": "Web-дизайн",
-      "fTeacher": "(лекц) Славникова М.А.",
+      "fLesson": "Технологии трехмерного моделирования и анимации",
+      "fTeacher": "(лек.) Николаева Л.Г.",
       "fCab": "ДО",
       "fLink": {
-        "link": "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_OGE0YzI2NDktYWJlNy00MDdlLWFmNzctOTZiMjZjN2Q2NGZl%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%220338160b-7d17-4160-b79b-ddb7e39f2a81%22%7D",
+        "link": "",
         "key": ""
       },
       "sTime": "20:10 - 21:40",
-      "sLesson": "Web-дизайн",
-      "sTeacher": "(пр) Славникова М.А.",
-      "sCab": "ДО",
+      "sLesson": "",
+      "sTeacher": "",
+      "sCab": "",
       "sLink": {
-        "link": "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_OGE0YzI2NDktYWJlNy00MDdlLWFmNzctOTZiMjZjN2Q2NGZl%40thread.v2/0?context=%7B%22Tid%22%3A%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2C%22Oid%22%3A%220338160b-7d17-4160-b79b-ddb7e39f2a81%22%7D",
+        "link": "",
         "key": ""
       }
     },
