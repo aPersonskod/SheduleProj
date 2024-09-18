@@ -50,7 +50,7 @@
       },
       "sTime": "20:10 - 21:40",
       "sLesson": "Администрирование информационных систем",
-      "sTeacher": "(пр.) Валуев К.В.",
+      "sTeacher": "(пр.) Валуев К.В. (пары не будет, иди чай пей!)",
       "sCab": "ДО",
       "sLink": {
         "link": "https://zoom.us/j/93274026040?pwd=m5tS44Jrpl5exdJOco6RgUYIb08XGy.1",
@@ -87,11 +87,11 @@
         "key": ""
       },
       "sTime": "20:10 - 21:40",
-      "sLesson": "",
-      "sTeacher": "",
-      "sCab": "",
+      "sLesson": "Эта ссылка только для избранных",
+      "sTeacher": "Не ходи сюда, если не избранный!",
+      "sCab": "даже не думай!",
       "sLink": {
-        "link": "",
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MDgzMDM4NmQtZDM4MS00NGQ0LWIyNGItM2MwZTQxYWYwMjJj%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%228f825631-6ad8-4b72-aa30-56b58805878f%22%7d",
         "key": ""
       }
     },
