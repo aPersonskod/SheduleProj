@@ -93,6 +93,7 @@
 </head>
 
 <body>
+<button onclick="window.location.href='ChangePage.html'">Изменить</button>
 <script>
     function GetDayOfWeek(date) {
         if (date.getDay() != 0)
@@ -123,7 +124,7 @@
 
     async function GetChislitel(isCurrentWeek) {
         //https://jsoneditoronline.org/#left=local.fuqeye&right=local.jayama
-        await fetch('./Chislitel.json')
+        await fetch('https://localhost:7089/Chislitel')
             .then((response) => response.json())
             .then((jsonData) => {
                 document.body.appendChild(CreateH1(GetNameOfWeekType(true)));
@@ -132,7 +133,7 @@
     }
     async function GetZnamenatel(isCurrentWeek) {
         //https://jsoneditoronline.org/#left=local.fuqeye&right=local.jayama
-        await fetch('./Znamenatel.json')
+        await fetch('https://localhost:7089/Znamenatel')
             .then((response) => response.json())
             .then(jsonData => {
                 document.body.appendChild(CreateH1(GetNameOfWeekType(false)));
@@ -175,29 +176,29 @@
 
             let selectedStyle = (GetDayOfWeek(currDate) - 1 == i && isCurrentWeek) ? 'tg-k56vSelected' : 'tg-k56v';
             let tr1 = CreateTR();
-            let td11 = CreateTD(selectedStyle, 4, jsonData.daysData[i].name);
-            let td12 = CreateTD('tg-k56v', 2, jsonData.daysData[i].fTime);
-            let td13 = CreateTD('tg-yulj', 0, jsonData.daysData[i].fLesson);
-            let td14 = CreateTD('tg-k56v', 2, jsonData.daysData[i].fCab + GetLinkTag(jsonData.daysData[i].fLink));
+            let td11 = CreateTD(selectedStyle, 4, jsonData[i].name);
+            let td12 = CreateTD('tg-k56v', 2, jsonData[i].fTime);
+            let td13 = CreateTD('tg-yulj', 0, jsonData[i].fLesson);
+            let td14 = CreateTD('tg-k56v', 2, jsonData[i].fCab + GetLinkTag(jsonData[i].fLink));
             tr1.appendChild(td11);
             tr1.appendChild(td12);
             tr1.appendChild(td13);
             tr1.appendChild(td14);
 
             let tr2 = CreateTR();
-            let td21 = CreateTD('tg-66k4', 0, jsonData.daysData[i].fTeacher);
+            let td21 = CreateTD('tg-66k4', 0, jsonData[i].fTeacher);
             tr2.appendChild(td21);
 
             let tr3 = CreateTR();
-            let td31 = CreateTD('tg-k56v', 2, jsonData.daysData[i].sTime);
-            let td32 = CreateTD('tg-yulj', 0, jsonData.daysData[i].sLesson);
-            let td33 = CreateTD('tg-k56v', 2, jsonData.daysData[i].sCab + GetLinkTag(jsonData.daysData[i].sLink));
+            let td31 = CreateTD('tg-k56v', 2, jsonData[i].sTime);
+            let td32 = CreateTD('tg-yulj', 0, jsonData[i].sLesson);
+            let td33 = CreateTD('tg-k56v', 2, jsonData[i].sCab + GetLinkTag(jsonData[i].sLink));
             tr3.appendChild(td31);
             tr3.appendChild(td32);
             tr3.appendChild(td33);
 
             let tr4 = CreateTR();
-            let td41 = CreateTD('tg-66k4', 0, jsonData.daysData[i].sTeacher);
+            let td41 = CreateTD('tg-66k4', 0, jsonData[i].sTeacher);
             tr4.appendChild(td41);
 
             tBody.appendChild(tr1);

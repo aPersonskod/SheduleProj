@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Редактор расписания</title>
+</head>
+<body>
+<div class="container">
+    <h2>Редактор расписания</h2>
+    <button onclick="window.location.href='index.html'">Назад</button>
+    <div class="form-container">
+        <form id="chislitel-form">
+            <h3>Числитель</h3>
+            <label for="chislitel-day">День недели:</label>
+            <select id="chislitel-day" required>
+                <option value="Понедельник">Понедельник</option>
+                <option value="Вторник">Вторник</option>
+                <option value="Среда">Среда</option>
+                <option value="Четверг">Четверг</option>
+                <option value="Пятница">Пятница</option>
+                <option value="Суббота">Суббота</option>
+            </select>
+
+            <h4>Первая пара</h4>
+            <label for="chislitel-time1">Время занятия:</label>
+            <input type="text" id="chislitel-time1">
+
+            <label for="chislitel-lesson1">Занятие:</label>
+            <input type="text" id="chislitel-lesson1">
+
+            <label for="chislitel-teacher1">Преподаватель:</label>
+            <input type="text" id="chislitel-teacher1">
+
+            <label for="chislitel-cabinet1">Кабинет:</label>
+            <input type="text" id="chislitel-cabinet1">
+
+            <label for="chislitel-link1">Ссылка на занятие:</label>
+            <input type="text" id="chislitel-link1">
+
+            <h4>Вторая пара</h4>
+            <label for="chislitel-time2">Время занятия:</label>
+            <input type="text" id="chislitel-time2">
+
+            <label for="chislitel-lesson2">Занятие:</label>
+            <input type="text" id="chislitel-lesson2">
+
+            <label for="chislitel-teacher2">Преподаватель:</label>
+            <input type="text" id="chislitel-teacher2">
+
+            <label for="chislitel-cabinet2">Кабинет:</label>
+            <input type="text" id="chislitel-cabinet2">
+
+            <label for="chislitel-link2">Ссылка на занятие:</label>
+            <input type="text" id="chislitel-link2">
+
+            <button type="submit">Добавить в числитель</button>
+        </form>
+    </div>
+    <div class="form-container">
+        <form id="znamenatel-form">
+            <h3>Знаменатель</h3>
+            <label for="znamenatel-day">День недели:</label>
+            <select id="znamenatel-day" required>
+                <option value="Понедельник">Понедельник</option>
+                <option value="Вторник">Вторник</option>
+                <option value="Среда">Среда</option>
+                <option value="Четверг">Четверг</option>
+                <option value="Пятница">Пятница</option>
+                <option value="Суббота">Суббота</option>
+            </select>
+            <h4>Первая пара</h4>
+            <label for="znamenatel-time1">Время занятия:</label>
+            <input type="text" id="znamenatel-time1">
+
+            <label for="znamenatel-lesson1">Занятие:</label>
+            <input type="text" id="znamenatel-lesson1">
+
+            <label for="znamenatel-teacher1">Преподаватель:</label>
+            <input type="text" id="znamenatel-teacher1">
+
+            <label for="znamenatel-cabinet1">Кабинет:</label>
+            <input type="text" id="znamenatel-cabinet1">
+
+            <label for="znamenatel-link1">Ссылка на занятие:</label>
+            <input type="text" id="znamenatel-link1">
+
+            <h4>Вторая пара</h4>
+            <label for="znamenatel-time2">Время занятия:</label>
+            <input type="text" id="znamenatel-time2">
+
+            <label for="znamenatel-lesson2">Занятие:</label>
+            <input type="text" id="znamenatel-lesson2">
+
+            <label for="znamenatel-teacher2">Преподаватель:</label>
+            <input type="text" id="znamenatel-teacher2">
+
+            <label for="znamenatel-cabinet2">Кабинет:</label>
+            <input type="text" id="znamenatel-cabinet2">
+
+            <label for="znamenatel-link2">Ссылка на занятие:</label>
+            <input type="text" id="znamenatel-link2">
+
+
+            <button type="submit">Добавить в знаменатель</button>
+        </form>
+    </div>
+</div>
+<div id="message"></div>
+<script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+﻿{
+  "daysData": [
+    {
+      "name": "Понедельник",
+      "fTime": "18:30 - 20:00",
+      "fLesson": "Технологии трехмерного моделирования и анимации",
+      "fTeacher": "(пр.) Николаева Л.Г.",
+      "fCab": "В 484",
+      "fLink": {
+        "link": "",
+        "key": ""
+      },
+      "sTime": "20:10 - 21:40",
+      "sLesson": "",
+      "sTeacher": "",
+      "sCab": "",
+      "sLink": {
+        "link": "",
+        "key": ""
+      }
+    },
+    {
+      "name": "Вторник",
+      "fTime": "18:30 - 20:00",
+      "fLesson": "Информационные системы и технологии",
+      "fTeacher": "(лек.) Шевякова А.Р.",
+      "fCab": "ДО",
+      "fLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZTEzNGNhOWMtM2U3MC00ZTYzLTg0MTgtOTRkZDkzNjMwYmY0%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%22f8101530-8d73-40e6-89ba-826d08303afc%22%7d",
+        "key": ""
+      },
+      "sTime": "20:10 - 21:40",
+      "sLesson": "Информационные системы и технологии",
+      "sTeacher": "(пр.) Шевякова А.Р.",
+      "sCab": "ДО",
+      "sLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_YTBjNTZiOWQtZGU0YS00OTY5LTgwYjQtODFiMjFmNTIxZjYz%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%22f8101530-8d73-40e6-89ba-826d08303afc%22%7d",
+        "key": ""
+      }
+    },
+    {
+      "name": "Среда",
+      "fTime": "18:30 - 20:00",
+      "fLesson": "Разработка ИТ проекта",
+      "fTeacher": "(пр.) Волкова Г.К.",
+      "fCab": "ДО",
+      "fLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_YzIxM2UxNWQtNzBiNy00MTEzLWI0Y2EtMjA2ZTVhNjhmNzcw%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%228f825631-6ad8-4b72-aa30-56b58805878f%22%7d",
+        "key": ""
+      },
+      "sTime": "20:10 - 21:40",
+      "sLesson": "Администрирование информационных систем",
+      "sTeacher": "(пр.) Валуев К.В. (пары не будет, иди чай пей!)",
+      "sCab": "ДО",
+      "sLink": {
+        "link": "https://zoom.us/j/93274026040?pwd=m5tS44Jrpl5exdJOco6RgUYIb08XGy.1",
+        "key": ""
+      }
+    },
+    {
+      "name": "Четверг",
+      "fTime": "18:30 - 20:00",
+      "fLesson": "Экономика проектной деятельности",
+      "fTeacher": "(лек) Дроботун Н.В.",
+      "fCab": "ДО",
+      "fLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NmUyNmRjZjEtYzc1MS00YjU0LWI1ZjMtMzVjMzM1YWEzMzI5%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%2281c9c07c-4933-487c-ade6-d0275a07f9ca%22%7d",
+        "key": ""
+      },
+      "sTime": "20:10 - 21:40",
+      "sLesson": "Экономика проектной деятельности",
+      "sTeacher": "(пр) Дроботун Н.В.",
+      "sCab": "ДО",
+      "sLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NmUyNmRjZjEtYzc1MS00YjU0LWI1ZjMtMzVjMzM1YWEzMzI5%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%2281c9c07c-4933-487c-ade6-d0275a07f9ca%22%7d",
+        "key": ""
+      }
+    },
+    {
+      "name": "Пятница",
+      "fTime": "18:30 - 20:00",
+      "fLesson": "Разработка ИТ проекта",
+      "fTeacher": "(лек) Волкова Г.К.",
+      "fCab": "ДО",
+      "fLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZDBhMzJlYTctYzM4My00YmEyLWJmNGMtZGRlZTNlYmQ0N2E4%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%228f825631-6ad8-4b72-aa30-56b58805878f%22%7d",
+        "key": ""
+      },
+      "sTime": "20:10 - 21:40",
+      "sLesson": "Эта ссылка только для избранных",
+      "sTeacher": "Не ходи сюда, если не избранный!",
+      "sCab": "даже не думай!",
+      "sLink": {
+        "link": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MDgzMDM4NmQtZDM4MS00NGQ0LWIyNGItM2MwZTQxYWYwMjJj%40thread.v2/0?context=%7b%22Tid%22%3a%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22%2c%22Oid%22%3a%228f825631-6ad8-4b72-aa30-56b58805878f%22%7d",
+        "key": ""
+      }
+    },
+    {
+      "name": "Суббота",
+      "fTime": "all time",
+      "fLesson": "hope",
+      "fTeacher": "we chill",
+      "fCab": "at home",
+      "fLink": {
+        "link": "",
+        "key": ""
+      },
+      "sTime": "all time",
+      "sLesson": "hope",
+      "sTeacher": "we chill",
+      "sCab": "at home",
+      "sLink": {
+        "link": "",
+        "key": ""
+      }
+    },
+    {
+      "name": "Воскресение",
+      "fTime": "all time",
+      "fLesson": "hope",
+      "fTeacher": "we chill",
+      "fCab": "at home",
+      "fLink": {
+        "link": "",
+        "key": ""
+      },
+      "sTime": "all time",
+      "sLesson": "hope",
+      "sTeacher": "we chill",
+      "sCab": "at home",
+      "sLink": {
+        "link": "",
+        "key": ""
+      }
+    }
+  ]
+}
