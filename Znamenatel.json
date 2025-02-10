@@ -3,39 +3,39 @@
     {
       "name": "Понедельник",
       "fTime": "18:30 - 20:00",
-      "fLesson": "Системы искуственного интеллекта",
-      "fTeacher": "(лек) Волков А.И.",
-      "fCab": "ДО",
+      "fLesson": "Технологии трехмерного моделирования и анимации",
+      "fTeacher": "(лек.) Николаева Л.Г.",
+      "fCab": "В 484",
       "fLink": {
-        "link": "https://teams.microsoft.com/l/meetup-join/19:S1PXlP2cPS6MPCYG2X8jCZKWE6v-9DLMctojsdjrqs01@thread.tacv2/1725895379281?context=%7B%22Tid%22:%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22,%22Oid%22:%2260d44a8a-735e-47f2-9ab2-fafa86b3d670%22%7D",
+        "link": "",
         "key": ""
       },
       "sTime": "20:10 - 21:40",
-      "sLesson": "Системы искуственного интеллекта",
-      "sTeacher": "(лаб) Волков А.И.",
-      "sCab": "ДО",
+      "sLesson": "Технологии трехмерного моделирования и анимации",
+      "sTeacher": "(пр.) Николаева Л.Г.",
+      "sCab": "В 484",
       "sLink": {
-        "link": "https://teams.microsoft.com/l/meetup-join/19:S1PXlP2cPS6MPCYG2X8jCZKWE6v-9DLMctojsdjrqs01@thread.tacv2/1725895379281?context=%7B%22Tid%22:%22b3b9e43a-cf9d-44e4-9eab-45cc01f38319%22,%22Oid%22:%2260d44a8a-735e-47f2-9ab2-fafa86b3d670%22%7D",
+        "link": "",
         "key": ""
       }
     },
     {
       "name": "Вторник",
       "fTime": "18:30 - 20:00",
-      "fLesson": "Патентно-лицензионная работа",
-      "fTeacher": "(лек.) Шванкин А.М.",
-      "fCab": "525",
+      "fLesson": "Разработка ИТ проекта",
+      "fTeacher": "(лек.) Волкова Г.К.",
+      "fCab": "ДО",
       "fLink": {
-        "link": "https://us04web.zoom.us/j/76862365051?pwd=wEvF20cmQU1zWj20mv1uUtKtZmUoHY.1",
-        "key": "3K9Gpb"
+        "link": "",
+        "key": ""
       },
       "sTime": "20:10 - 21:40",
-      "sLesson": "Патентно-лицензионная работа",
-      "sTeacher": "(лек.) Шванкин А.М.",
-      "sCab": "525",
+      "sLesson": "Разработка ИТ проекта",
+      "sTeacher": "(пр.) Волкова Г.К.",
+      "sCab": "ДО",
       "sLink": {
-        "link": "https://us04web.zoom.us/j/76862365051?pwd=wEvF20cmQU1zWj20mv1uUtKtZmUoHY.1",
-        "key": "3K9Gpb"
+        "link": "",
+        "key": ""
       }
     },
     {
@@ -45,13 +45,13 @@
       "fTeacher": "(лек.) Валуев К.В.",
       "fCab": "ДО",
       "fLink": {
-        "link": "https://zoom.us/j/93274026040?pwd=m5tS44Jrpl5exdJOco6RgUYIb08XGy.1",
+        "link": "",
         "key": ""
       },
       "sTime": "20:10 - 21:40",
-      "sLesson": "",
-      "sTeacher": "",
-      "sCab": "",
+      "sLesson": "Администрирование информационных систем",
+      "sTeacher": "(пр.) Валуев К.В.",
+      "sCab": "ДО",
       "sLink": {
         "link": "",
         "key": ""
@@ -60,17 +60,17 @@
     {
       "name": "Четверг",
       "fTime": "18:30 - 20:00",
-      "fLesson": "Web-дизайн",
-      "fTeacher": "(пр) Кокорин Е.С.",
-      "fCab": "В 462",
+      "fLesson": "Информационная безопасность",
+      "fTeacher": "(лек) Чернина И.М.",
+      "fCab": "В286",
       "fLink": {
         "link": "",
         "key": ""
       },
       "sTime": "20:10 - 21:40",
-      "sLesson": "Web-дизайн",
-      "sTeacher": "(пр) Кокорин Е.С.",
-      "sCab": "В 462",
+      "sLesson": "Информационная безопасность",
+      "sTeacher": "(пр) Чернина И.М.",
+      "sCab": "В286",
       "sLink": {
         "link": "",
         "key": ""
@@ -79,17 +79,17 @@
     {
       "name": "Пятница",
       "fTime": "18:30 - 20:00",
-      "fLesson": "Технологии трехмерного моделирования и анимации",
-      "fTeacher": "(лек.) Николаева Л.Г.",
-      "fCab": "В 452",
+      "fLesson": "hope",
+      "fTeacher": "we chill",
+      "fCab": "at home",
       "fLink": {
         "link": "",
         "key": ""
       },
       "sTime": "20:10 - 21:40",
-      "sLesson": "",
-      "sTeacher": "",
-      "sCab": "",
+      "sLesson": "hope",
+      "sTeacher": "we chill",
+      "sCab": "at home",
       "sLink": {
         "link": "",
         "key": ""
