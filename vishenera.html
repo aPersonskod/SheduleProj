@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$Title$</title>
+  <style>
+    .d-flex{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+<div >
+  <p>Алфавит</p>
+  <input id="alphabet" value="АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЪЫЭЮЯ" style="width: 80vw">
+  <p>Значение</p>
+  <input id="value" style="width: 80vw">
+  <p>Ключ</p>
+  <input id="key" style="width: 80vw">
+  <p>Зашифр/дешифр:</p>
+  <input id="shifr" style="width: 80vw">
+  <br>
+  <br>
+  <br>
+  <button onclick="encrypt()">Зашифровать</button>
+  <br>
+  <br>
+  <br>
+  <button onclick="decrypt()">Разшифровать</button>
+</div>
+</body>
+<script>
+  class VigenereCipher {
+    constructor(alphabet) {
+      //this.alphabet = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
+      this.alphabet = alphabet;
+      this.alphabetLength = this.alphabet.length;
+    }
+
+    // Преобразование текста: удаление пробелов и приведение к верхнему регистру
+    prepareText(text) {
+      return text.toUpperCase().replace(/[^А-Я]/g, '');
+    }
+
+    // Шифрование
+    encrypt(plainText, key) {
+      const preparedText = this.prepareText(plainText);
+      const preparedKey = this.prepareText(key);
+      let encryptedText = '';
+
+      for (let i = 0; i < preparedText.length; i++) {
+        const textChar = preparedText[i];
+        const keyChar = preparedKey[i % preparedKey.length];
+
+        const textIndex = this.alphabet.indexOf(textChar);
+        const keyIndex = this.alphabet.indexOf(keyChar);
+
+        if (textIndex === -1 || keyIndex === -1) {
+          encryptedText += textChar; // если символа нет в алфавите, оставляем как есть
+          continue;
+        }
+
+        const encryptedIndex = (textIndex + keyIndex) % this.alphabetLength;
+        encryptedText += this.alphabet[encryptedIndex];
+      }
+
+      return encryptedText;
+    }
+
+    // Дешифрование
+    decrypt(encryptedText, key) {
+      const preparedText = this.prepareText(encryptedText);
+      const preparedKey = this.prepareText(key);
+      let decryptedText = '';
+
+      for (let i = 0; i < preparedText.length; i++) {
+        const textChar = preparedText[i];
+        const keyChar = preparedKey[i % preparedKey.length];
+
+        const textIndex = this.alphabet.indexOf(textChar);
+        const keyIndex = this.alphabet.indexOf(keyChar);
+
+        if (textIndex === -1 || keyIndex === -1) {
+          decryptedText += textChar;
+          continue;
+        }
+
+        // + this.alphabetLength чтобы избежать отрицательных чисел
+        const decryptedIndex = (textIndex - keyIndex + this.alphabetLength) % this.alphabetLength;
+        decryptedText += this.alphabet[decryptedIndex];
+      }
+
+      return decryptedText;
+    }
+  }
+  
+  
+
+  // Пример использования
+  const cipher = new VigenereCipher();
+
+  const plainText = 'ПРИВЕТ';
+  const key = 'КЛЮЧ';
+
+  const encrypted = cipher.encrypt(plainText, key);
+  console.log('Зашифровано:', encrypted); // => "ЫЬЗЪПЯ"
+
+  const decrypted = cipher.decrypt(encrypted, key);
+  console.log('Расшифровано:', decrypted); // => "ПРИВЕТ"
+  
+  function encrypt(){
+    
+      let alph = document.getElementById('alphabet').value;
+      const cipher = new VigenereCipher(alph);
+      const plainText = document.getElementById('value').value;
+      const key = document.getElementById('key').value;
+      const encrypted = cipher.encrypt(plainText, key);
+      document.getElementById('shifr').value = encrypted;
+  }
+
+  function decrypt(){
+
+    let alph = document.getElementById('alphabet').value;
+    const cipher = new VigenereCipher(alph);
+    const plainText = document.getElementById('value').value;
+    const key = document.getElementById('key').value;
+    const encrypted = cipher.decrypt(plainText, key);
+    document.getElementById('shifr').value = encrypted;
+  }
+</script>
+</html>
